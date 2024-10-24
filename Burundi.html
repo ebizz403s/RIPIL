@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+h1 {
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+th {
+  background-color: #f8fafc;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+tr:hover {
+  background-color: #f8fafc;
+}
+tr.mismatch {
+  background-color: #fee2e2;
+}
+tr.mismatch:hover {
+  background-color: #fecaca;
+}
+.confidence {
+  font-family: monospace;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.high {
+  background-color: #dcfce7;
+  color: #166534;
+}
+.medium {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+.low {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+.known {
+  color: #16a34a;
+}
+.unknown {
+  color: #dc2626;
+}
+.translation {
+  color: #6b7280;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+  <h1>Organization Classification Analysis - Model vs Human Comparison</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Organization</th>
+        <th>Model Classification</th>
+        <th>Human Classification</th>
+        <th>Status</th>
+        <th>Confidence</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Swiss Tropical and Public Health Institute</td>
+        <td>International civil society</td>
+        <td>International civil society</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.90</span></td>
+        <td>Research and education institution focused on global health</td>
+      </tr>
+      <tr>
+        <td>Prime Minister's Office - Italy</td>
+        <td>Bilateral donor or actor</td>
+        <td>Bilateral donor or actor</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.85</span></td>
+        <td>Government entity that can engage in bilateral aid and international cooperation</td>
+      </tr>
+      <tr class="mismatch">
+        <td>
+          Conseil pour l'Education et le Développement<br>
+          <span class="translation">Council for Education and Development</span>
+        </td>
+        <td>National civil society</td>
+        <td>NNGO</td>
+        <td><span class="unknown">× Unknown</span></td>
+        <td><span class="confidence medium">0.70</span></td>
+        <td>Organization focused on education and development within a specific country</td>
+      </tr>
+      <tr>
+        <td>Environment and Climate Change Canada</td>
+        <td>Bilateral donor or actor</td>
+        <td>Bilateral donor or actor</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.90</span></td>
+        <td>Government department of Canada engaging in international environmental initiatives</td>
+      </tr>
+      <tr>
+        <td>African Union Political Affairs, Peace and Security</td>
+        <td>IGO</td>
+        <td>IGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.95</span></td>
+        <td>Intergovernmental organization with member states across Africa</td>
+      </tr>
+      <tr>
+        <td>Government of Chihuahua - Mexico</td>
+        <td>Bilateral donor or actor</td>
+        <td>Bilateral donor or actor</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.80</span></td>
+        <td>Regional government entity that can engage in bilateral activities</td>
+      </tr>
+      <tr>
+        <td>Peacebuilding Support Office</td>
+        <td>IGO</td>
+        <td>IGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.90</span></td>
+        <td>Part of the United Nations, an intergovernmental organization</td>
+      </tr>
+      <tr class="mismatch">
+        <td>Healthy Entrepreneurs</td>
+        <td>International company</td>
+        <td>INGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.85</span></td>
+        <td>Social enterprise operating in multiple countries</td>
+      </tr>
+      <tr>
+        <td>International Procurement Agency</td>
+        <td>International company</td>
+        <td>International Company</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.90</span></td>
+        <td>Provides procurement services across countries</td>
+      </tr>
+      <tr>
+        <td>Alboan</td>
+        <td>INGO</td>
+        <td>INGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.90</span></td>
+        <td>Jesuit NGO focused on development and social justice, active in multiple countries</td>
+      </tr>
+      <tr class="mismatch">
+        <td>
+          Association Bonne Semence pour le Developpment et la Paix<br>
+          <span class="translation">Good Seed Association for Development and Peace</span>
+        </td>
+        <td>NNGO</td>
+        <td>INGO</td>
+        <td><span class="unknown">× Unknown</span></td>
+        <td><span class="confidence medium">0.75</span></td>
+        <td>Organization focused on development and peace within a specific country</td>
+      </tr>
+      <tr>
+        <td>Missionaries of the Company of Mary</td>
+        <td>International civil society</td>
+        <td>International civil society</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.85</span></td>
+        <td>Religious organization with activities in multiple countries</td>
+      </tr>
+      <tr>
+        <td>
+          Ministère de la Décentralisation et de la Réforme Institutionnelle - Burundi<br>
+          <span class="translation">Ministry of Decentralization and Institutional Reform - Burundi</span>
+        </td>
+        <td>GOV</td>
+        <td>GOV</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.95</span></td>
+        <td>Government ministry in Burundi</td>
+      </tr>
+      <tr>
+        <td>American Council on Education</td>
+        <td>International civil society</td>
+        <td>International civil society</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.85</span></td>
+        <td>Higher education association</td>
+      </tr>
+      <tr class="mismatch">
+        <td>International Development Association</td>
+        <td>IGO-FUND</td>
+        <td>IGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.95</span></td>
+        <td>Part of the World Bank Group, serving as a financial instrument</td>
+      </tr>
+      <tr class="mismatch">
+        <td>
+          Koperative Twungurane<br>
+          <span class="translation">Twungurane Cooperative</span>
+        </td>
+        <td>National civil society</td>
+        <td>National Company</td>
+        <td><span class="unknown">× Unknown</span></td>
+        <td><span class="confidence medium">0.70</span></td>
+        <td>Cooperative organization within a specific country</td>
+      </tr>
+      <tr class="mismatch">
+        <td>Girl Guides Association</td>
+        <td>International civil society</td>
+        <td>INGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.90</span></td>
+        <td>Global movement focused on youth development</td>
+      </tr>
+      <tr>
+        <td>Development and Peace - Caritas Canada</td>
+        <td>INGO</td>
+        <td>INGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.90</span></td>
+        <td>Catholic organization focused on development and humanitarian aid, active in multiple countries</td>
+      </tr>
+      <tr>
+        <td>Vétérinaires Sans Frontières International</td>
+        <td>INGO</td>
+        <td>INGO</td>
+        <td><span class="known">✓ Known</span></td>
+        <td><span class="confidence high">0.95</span></td>
+        <td>NGO focused on veterinary services and development, active in multiple countries</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
