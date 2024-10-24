@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labels and Definitions - Classification Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #0056b3;
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #0056b3;
+        }
+        p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+            overflow-x: auto;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Labels and Definitions - Classification Task</h1>
+    
+    <h2>Labels and Definitions:</h2>
+    <p>1. <strong>IGO:</strong> A formal organization whose members are countries or states, with three or more members. Most definitions in the literature also require a permanent secretariat or other indication of institutionalization, such as headquarters, staff, and budgets.</p>
+    <p>2. <strong>IGO-FUND:</strong> A subset of IGOs, serving as financial instruments, typically consisting of pooled contributions from states, and managed by a specific IGO.</p>
+    <p>3. <strong>Bilateral donor or actor:</strong> A government or state organization not from {country} that is funding and/or carrying out the provision of goods and services outside of its territory.</p>
+    <p>4. <strong>GOV:</strong> The government of {country} where goods and services are provided, either by a domestic actor or an external actor like the UN.</p>
+    <p>5. <strong>INGO:</strong> A nongovernmental, not-for-profit organization active in more than one country, with advocacy and/or service delivery as its primary purpose, not established by an intergovernmental agreement.</p>
+    <p>6. <strong>NNGO:</strong> A nongovernmental, not-for-profit organization active in only one country, focusing on advocacy and/or service delivery for the broader society rather than just its membership.</p>
+    <p>7. <strong>International civil society:</strong> A nongovernmental, not-for-profit organization active in more than one country, with purposes other than advocacy or service delivery, such as religious or academic interests.</p>
+    <p>8. <strong>National civil society:</strong> A nongovernmental, not-for-profit organization active in only one country, with a primary focus on specific interests rather than the general public.</p>
+    <p>9. <strong>International company:</strong> A for-profit organization active in more than one country, including multinational enterprises.</p>
+    <p>10. <strong>National company:</strong> A for-profit organization active in only one country.</p>
+    
+    <h2>Organizations List:</h2>
+    <ul>
+        <li>1. Unknown and Unspecified</li>
+        <li>2. Österreichs Agentur für Bildung und Internationalisierung</li>
+        <li>3. Deutsche Gesellschaft für Internationale Zusammenarbeit</li>
+        <li>4. Unspecified Austrian University</li>
+        <li>5. United Nations Development Programme</li>
+        <li>6. Unspecified International NGO</li>
+        <li>7. 5XMILLE</li>
+        <li>8. 80:20 Educating and Acting for a Better World</li>
+        <li>9. 8xMILLE</li>
+        <li>10. Associazione Solidarietà Paesi Emergenti</li>
+        <li>11. ABAVANDIMWE</li>
+        <li>12. Abt Associates Inc.</li>
+        <li>13. Abu Dhabi Fund for Development</li>
+        <li>14. Association Burundaise pour le Bien-Etre Familial</li>
+        <li>15. Asociación Comisión Católica Española de Migraciones</li>
+        <li>16. African Centre for the Constructive Resolution of Disputes</li>
+        <li>17. Accountable Development Works</li>
+        <li>18. Action Contre la Faim International</li>
+        <li>19. United Nations High Commissioner for Refugees</li>
+        <li>20. Red Acoge</li>
+        <!-- More organizations as needed -->
+    </ul>
+
+    <h2>Research and Classification Task:</h2>
+    <p>Your task is to assist in classifying the organizations listed above based on the provided labels and definitions. Please use the following steps:</p>
+    <ul>
+        <li>Research relevant concepts and background information for the organizations listed.</li>
+        <li>Classify each organization based on the given labels and definitions.</li>
+        <li>For each organization, report the following information:
+            <ul>
+                <li><strong>Organization Name</strong></li>
+                <li><strong>Classification</strong></li>
+                <li><strong>Explanation</strong></li>
+                <li><strong>Known by Model</strong></li>
+                <li><strong>Confidence Score (0-1)</strong></li>
+                <li><strong>Translated Name</strong> (if applicable)</li>
+                <li><strong>Translated Classification</strong> (if different)</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h2>Prompt for Classification:</h2>
+    <pre>
+        {
+            "organization_name": "Example Organization",
+            "classification": "INGO",
+            "explanation": "This organization is classified as an INGO because it operates in multiple countries and focuses on advocacy.",
+            "known_by_model": true,
+            "confidence_score": 0.9,
+            "translated_name": "Example Translated Name",
+            "translated_classification": "N/A"
+        }
+    </pre>
+</div>
+
+</body>
+</html>
